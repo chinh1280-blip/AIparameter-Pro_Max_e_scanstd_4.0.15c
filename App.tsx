@@ -667,14 +667,14 @@ const App: React.FC = () => {
               </div>
             )}
 
-            <div className="flex items-center gap-1.5">
+            <div className="flex items-center gap-1">
                {/* === TỐI ƯU: Tab lớn hơn, dễ bấm === */}
                <div className="flex bg-slate-800/80 p-0.5 rounded-lg border border-slate-700/50">
-                 <button onClick={() => setActiveView('capture')} className={`px-3 py-2 rounded-md flex items-center gap-1.5 transition-all ${activeView === 'capture' ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-500 hover:text-slate-300'}`}>
+                 <button onClick={() => setActiveView('capture')} className={`px-2 py-1.5 sm:px-3 sm:py-2 rounded-md flex items-center gap-1.5 transition-all ${activeView === 'capture' ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-500 hover:text-slate-300'}`}>
                    <Camera size={18} />
                    <span className="text-xs font-black uppercase hidden sm:inline">Chụp ảnh</span>
                  </button>
-                 <button onClick={() => setActiveView('dashboard')} className={`px-3 py-2 rounded-md flex items-center gap-1.5 transition-all ${activeView === 'dashboard' ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-500 hover:text-slate-300'}`}>
+                 <button onClick={() => setActiveView('dashboard')} className={`px-2 py-1.5 sm:px-3 sm:py-2 rounded-md flex items-center gap-1.5 transition-all ${activeView === 'dashboard' ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-500 hover:text-slate-300'}`}>
                    <ClipboardList size={18} />
                    <span className="text-xs font-black uppercase hidden sm:inline">Nhật ký</span>
                  </button>
@@ -708,10 +708,10 @@ const App: React.FC = () => {
                )}
                
                {activeView === 'capture' && (
-                 <button onClick={() => setIsUserGuideOpen(true)} className="p-2.5 rounded-lg border bg-slate-800 border-slate-700 text-blue-400 hover:bg-slate-700 transition-colors" title="Hướng dẫn"><BookOpen size={20} /></button>
+                 <button onClick={() => setIsUserGuideOpen(true)} className="p-1.5 sm:p-2.5 rounded-lg border bg-slate-800 border-slate-700 text-blue-400 hover:bg-slate-700 transition-colors" title="Hướng dẫn"><BookOpen size={18} className="sm:w-5 sm:h-5" /></button>
                )}
-               <button onClick={() => setIsSettingsOpen(true)} className="p-2.5 rounded-lg border bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700 transition-colors"><Settings size={20} /></button>
-               <button onClick={handleLogout} className="p-2.5 rounded-lg border bg-slate-800 border-slate-700 text-red-400 hover:bg-slate-700 transition-colors" title="Đăng xuất"><LogOut size={20} /></button>
+               <button onClick={() => setIsSettingsOpen(true)} className="p-1.5 sm:p-2.5 rounded-lg border bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700 transition-colors"><Settings size={18} className="sm:w-5 sm:h-5" /></button>
+               <button onClick={handleLogout} className="p-1.5 sm:p-2.5 rounded-lg border bg-slate-800 border-slate-700 text-red-400 hover:bg-slate-700 transition-colors" title="Đăng xuất"><LogOut size={18} className="sm:w-5 sm:h-5" /></button>
             </div>
           </div>
           
